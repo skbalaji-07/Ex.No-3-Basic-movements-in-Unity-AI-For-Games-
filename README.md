@@ -1,12 +1,10 @@
 # Ex.No: 3  Basic movements in Unity 
-
-### DATE:                                                                            
-### REGISTER NUMBER : 
-
+### DATE:  31/08/2026                                                                          
+### REGISTER NUMBER : 2305003001
+### NAME : Balaji SK
 ### AIM: 
  To learn the basic movements translation,scaling and rotation of game objects through code.
-
-### PROCEDURE:
+### Procedure:
 1. Setup the Scene
 2. Open Unity and create a 3D Scene.
 3. Add three objects:Cube → Rename to Object1 (for movement),Sphere → Rename to Object2 (for rotation).Capsule → Rename to Object3 (for scaling).
@@ -18,8 +16,7 @@
 9. In the Inspector, assign Object1 → Drag the Cube,Object2 → Drag the Sphere.Object3 → Drag the Capsule.
 10. Run the Scene Press Play ▶️ in Unity
 11. Stop the program.
-
-### PROGRAM: 
+### Program 
 ```
 using UnityEngine;
 public class TransformOperations : MonoBehaviour
@@ -37,37 +34,35 @@ public class TransformOperations : MonoBehaviour
         // Translate (Move) object1 along the X-axis- Time.deltaTime to make movement smooth across all frame rates
         if (object1 != null)
         {
-           // object1.position += Vector3.right * moveSpeed;
-               object1.Translate(0.02f,0,0);
-
+            object1.position += Vector3.right * moveSpeed * Time.deltaTime;
         }
 
         // Rotate object2 around the Y-axis
         if (object2 != null)
         {
-            //object2.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
-            //object2.Rotate(0,0.02f.0);
+            object2.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
         }
 
         // Scale object3 up and down
         if (object3 != null)
         {
-           // float scaleChange = Mathf.PingPong(Time.time * scaleSpeed, 1f) + 0.5f; // generates a value that moves back and forth between 0 and length
-           // object3.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
-            object3.localScale+=new Vector3(0.02f.0.02f,0);
-
+            float scaleChange = Mathf.PingPong(Time.time * scaleSpeed, 1f) + 0.5f; // generates a value that moves back and forth between 0 and length
+            object3.localScale = new Vector3(scaleChange, scaleChange, scaleChange);
         }
     }
 }
 ```
-### OUTPUT:
+### Output:
+
+![Adhithya_image](https://github.com/user-attachments/assets/e3fe89df-9d4c-453d-8a58-61d2cc476e2a)
+
+
+![Adhithya_image](https://github.com/user-attachments/assets/aea3bf27-b290-48a7-9874-ca69bd29764f)
 
 
 
 
 
-
-
-
-### RESULT:
+### Result:
 Thus the basic movement is learned through scripting
+
